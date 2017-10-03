@@ -12,6 +12,7 @@ else {
 }
     document.getElementById("Browser").innerHTML = browser;
 
+//get_text_dimensions function taken from paper
 function get_text_dimensions(font){
     h = document.getElementsByTagName("BODY")[0];
     d = document.createElement("DIV");
@@ -28,6 +29,7 @@ function get_text_dimensions(font){
     return [textWidth, textHeight];
     }
 
+//hashCode function taken from erlycoder.com
 hashCode = function(str){
     var hash = 0;
     if (str.length == 0) return hash;
