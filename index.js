@@ -12,3 +12,38 @@ else {
 }
     document.getElementById("Browser").innerHTML = browser;
 
+function get_text_dimensions(font){
+    h = document.getElementsByTagName("BODY")[0];
+    d = document.createElement("DIV");
+    s = document.createElement("SPAN");
+    d.appendChild(s);
+    d.style.fontFamily = font;
+    s.style.fontFamily = font;
+    s.style.fontSize = "72px";
+    s.innerHTML = "font_detection";
+    h.appendChild(d);
+    textWidth = s.offsetWidth;
+    textHeight = s.offsetHeight;
+    h.removeChild(d);
+    return [textWidth, textHeight];
+    }
+
+hashCode = function(str){
+    var hash = 0;
+    if (str.length == 0) return hash;
+    for (var i in str) {
+	char = str.charCodeAt(i);
+	hash = ((hash<<5)-hash)+char;
+	hash = hash & hash; // Convert to 32bit integer
+    }
+    return hash;
+}
+
+fonts = ["Sans", "Arial", "Calibri", "Arial Black", "Arial Narrow", "Arial Rounded MT Bold", "Avant Garde", "Candara", "Century Gothic", "Futura", "Geneva", "Gill Sans", "Helvetica", "Impact", "Optima", "Tahoma", "Verdana", "Cambria", "Didot", "Garamond", "Georgia", "Palatino", "Perpetua", "Rockwell", "Baskerville", "Times New Roman", "Consolas", "Lucidia Console", "Monaco", "Andale Mono", "Copperplate", "Papyrus", "Brush Script MT"];
+
+sizes = fonts.map(get_text_dimensions);
+
+string = JSON.stringify(sizes);
+
+document.getElementById("Fingerprint").innerHTML = hashCode(string);
+
