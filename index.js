@@ -39,7 +39,7 @@ hashCode = function(str){
     return hash;
 }
 
-fonts = ["Sans", "Arial", "Calibri", "Arial Black", "Arial Narrow", "Arial Rounded MT Bold", "Avant Garde", "Candara", "Century Gothic", "Futura", "Geneva", "Gill Sans", "Helvetica", "Impact", "Optima", "Tahoma", "Verdana", "Cambria", "Didot", "Garamond", "Georgia", "Palatino", "Perpetua", "Rockwell", "Baskerville", "Times New Roman", "Consolas", "Lucidia Console", "Monaco", "Andale Mono", "Copperplate", "Papyrus", "Brush Script MT"];
+fonts = ["Sans", "Arial", "Calibri", "Arial Black", "Arial Narrow", "Arial Rounded MT Bold", "Avant Garde", "Candara", "Century Gothic", "Franklin Gothic Medium", "Futura", "Geneva", "Gill Sans", "Helvetica", "Impact", "Lucida Grande", "Optima", "Segoe UI", "Tahoma", "Trebuchet MS", "Verdana", "Big Caslon", "Bodoni MT", "Book Antiqua", "Calisto MT", "Cambria", "Didot", "Garamond", "Georgia", "Goudy Old Style", "Hoefler Text", "Lucida Bright", "Palatino", "Perpetua", "Rockwell", "Rockwell Extra Bold", "Baskerville", "Times New Roman", "Consolas", "Courier New", "Lucidia Console", "Lucida Sans Typewriter", "Monaco", "Andale Mono", "Copperplate", "Papyrus", "Brush Script MT"];
 
 sizes = fonts.map(get_text_dimensions);
 
