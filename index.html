@@ -9,10 +9,15 @@
     if(screen.mozOrientation !== undefined){
     browser = "Firefox";
     }
-    else{
-    browser = "Not Firefox";
+    else if(navigator.webkitGetUserMedia !== undefined){
+    browser = "Google Chrome or Chromium";
     }
-
+    else if (navigator.browserLanguage !== undefined){
+    browser = "Opera";
+    }
+    else if (navigator.appMinorVersion !== undefined){
+    browser = "Internet Explorer or Edge";
+    }
     document.getElementById("Browser").innerHTML = browser
   </script>
 </html>
