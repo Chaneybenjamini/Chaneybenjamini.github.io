@@ -43,7 +43,7 @@ fonts = ["Sans", "Arial", "Calibri", "Arial Black", "Arial Narrow", "Arial Round
 
 sizes = fonts.map(get_text_dimensions);
 
-string = JSON.stringify(sizes);
+string = JSON.stringify(sizes + browser);
 
 document.getElementById("Fingerprint").innerHTML = hashCode(string);
 
