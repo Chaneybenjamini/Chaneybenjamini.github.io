@@ -1,1 +1,18 @@
-Hello World
+<!DOCTYPE html>
+
+<html>
+  <body>
+    <p id="Browser">  </p>
+    <p id="Fingerprint"> </p>
+  </body>
+  <script>
+    if(screen.mozOrientation !== undefined){
+    browser = "Firefox";
+    }
+    else{
+    browser = "Not Firefox";
+    }
+
+    document.getElementById("Browser").innerHTML = browser
+  </script>
+</html>
